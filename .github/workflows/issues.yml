@@ -1,0 +1,17 @@
+#This workflow runs when an issue is triggered.
+
+name: Handle Issues 
+on:
+    push:
+
+jobs:
+    Output-info:
+
+        runs-on: ubuntu-latest
+
+        steps:
+
+            - name: Output event details
+              run:  echo "${{  toJSON(github.event)  }}"
+
+
